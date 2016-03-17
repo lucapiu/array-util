@@ -10,6 +10,9 @@
       "email": "email@example.com"
     }
   ],
+  "require": {
+    "php": ">=5.5.0",
+  },
   "autoload": {
     "psr-0" : {
       "lucapiu\\ArrayUtil" : "src"
