@@ -14,3 +14,17 @@ if (! function_exists('sortArray')) {
         return $testArray;
     }
 }
+if (! function_exists('getListAttribute')) {
+    /**
+     * @param $data array
+     * @param $attribute string
+     * @return array
+     */
+    function getListAttribute($data, $attribute)
+    {
+        return array_map(
+            function($element) use ($attribute) { return $element->attribute($attribute); },
+            $data
+        );
+    }
+}
