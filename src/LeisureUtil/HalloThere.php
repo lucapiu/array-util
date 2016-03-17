@@ -1,5 +1,5 @@
 <?php
-namespace lucapiu\LeisureUtil;
+namespace LeisureUtil;
 /**
  * A terribly useful class
  *
