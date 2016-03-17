@@ -1,11 +1,11 @@
 {
-  "name": "vendor_name/package_name",
-  "description": "description_text",
+  "name": "lucapiu/array-util",
+  "description": "an utility package to handle arrays",
   "minimum-stability": "stable",
   "license": "proprietary",
   "authors": [
     {
-      "name": "author's name",
+      "name": "Luca Sartori",
       "email": "email@example.com"
     }
   ]
