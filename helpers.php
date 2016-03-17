@@ -39,7 +39,7 @@ if (! function_exists('getRequiredUrlForDateRange')) {
 
     function getRequiredUrlForDateRange($expectedDate, $expectedRange)
     {
-        $expectedDateRange = substr($expectedDate[0], 1) . $expectedRange;
+        $expectedDateRange = substr($expectedDate, 1) . $expectedRange;
         return $expectedDateRange;
     }
 }
