@@ -6,7 +6,7 @@ namespace LeisureUtil;
  */
 class HalloThere
 {
-    public function sayHallo()
+    public static function sayHallo()
     {
         return 'Hallo!';
     }
