@@ -1,5 +1,5 @@
 <?php
-namespace lucapiu\ArrayUtil;
+namespace lucapiu\LeisureUtil;
 /**
  * A terribly useful class
  *
