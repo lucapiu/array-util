@@ -28,3 +28,18 @@ if (! function_exists('getListAttribute')) {
         );
     }
 }
+
+/**
+ * Returns a string that contains the provided date and range, for asserting against the last part of the page url.
+ * @param $expectedDate
+ * @param $expectedRange
+ * @return string
+ */
+if (! function_exists('getRequiredUrlForDateRange')) {
+
+    function getRequiredUrlForDateRange($expectedDate, $expectedRange)
+    {
+        $expectedDateRange = substr($expectedDate[0], 1) . $expectedRange;
+        return $expectedDateRange;
+    }
+}
