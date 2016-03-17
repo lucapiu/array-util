@@ -14,8 +14,11 @@
     "php": ">=5.5.0"
   },
   "autoload": {
-    "psr-0" : {
-      "LeisureUtil" : "src/"
-    }
+    "psr-4": {
+      "lucapiu\\LeisureUtil\\": ""
+    },
+    "files": [
+      "helpers.php"
+    ]
   }
 }
