@@ -43,3 +43,34 @@ if (! function_exists('getRequiredUrlForDateRange')) {
         return $expectedDateRange;
     }
 }
+
+if (! function_exists('hasClass')) {
+
+    function hasClass($element, $class)
+    {
+
+        if (strpos($element, $class)!=false){
+            return true;
+        }
+        return false;
+    }
+}
+
+if (! function_exists('getRangeDates')) {
+
+    function getRangeDates($arrivalDate, $arrivalDateRange)
+    {
+//        $year = substr($arrivalDate, 2, 4);
+//        $month = substr($arrivalDate, 6, 2);
+//        $day = substr($arrivalDate, 8, 2);
+        $date = substr($arrivalDate, 2);
+        $dates = [];
+        for ($i=-$arrivalDateRange;$i<=$arrivalDateRange;$i++){
+            if ($i!=0) {
+                $dates[] = date('Ymd', strtotime($date . ' ' . $i . ' day'));
+            }
+        }
+        return $dates;
+
+    }
+}
