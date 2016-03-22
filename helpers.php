@@ -60,17 +60,30 @@ if (! function_exists('getRangeDates')) {
 
     function getRangeDates($arrivalDate, $arrivalDateRange)
     {
-//        $year = substr($arrivalDate, 2, 4);
-//        $month = substr($arrivalDate, 6, 2);
-//        $day = substr($arrivalDate, 8, 2);
         $date = substr($arrivalDate, 2);
         $dates = [];
-        for ($i=-$arrivalDateRange;$i<=$arrivalDateRange;$i++){
-            if ($i!=0) {
+        for ($i = -$arrivalDateRange; $i <= $arrivalDateRange; $i++) {
+            if ($i != 0) {
                 $dates[] = date('Ymd', strtotime($date . ' ' . $i . ' day'));
             }
         }
         return $dates;
 
+    }
+}
+
+if (! function_exists('getCurrentMonth')) {
+
+    function getCurrentMonth()
+    {
+        return date("Ym", strtotime("+0 day"));
+    }
+}
+
+if (! function_exists('getCurrentDate')) {
+
+    function getCurrentDate()
+    {
+        return date("Ymd", strtotime("+0 day"));
     }
 }
