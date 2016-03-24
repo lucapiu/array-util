@@ -96,3 +96,14 @@ if (! function_exists('validateDate')) {
         return $d && $d->format('Y-m-d') == $date;
     }
 }
+
+if (! function_exists('formatDateFromLocator')) {
+
+    function formatDateFromLocator($date)
+    {
+        $year = substr($date, 2,4);
+        $month = substr($date, 6,2);
+        $day = substr($date, 8,2);
+        return $year."-".$month."-".$day;
+    }
+}
