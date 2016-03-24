@@ -88,9 +88,9 @@ if (! function_exists('getCurrentDate')) {
     }
 }
 
-if (! function_exists('validateDate')) {
+if (! function_exists('validateDataLayerDate')) {
 
-    function validateDate($date)
+    function validateDataLayerDate($date)
     {
         $d = DateTime::createFromFormat('Y-m-d', $date);
         return $d && $d->format('Y-m-d') == $date;
