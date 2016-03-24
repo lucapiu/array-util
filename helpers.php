@@ -87,3 +87,12 @@ if (! function_exists('getCurrentDate')) {
         return date("Ymd", strtotime("+0 day"));
     }
 }
+
+if (! function_exists('validateDate')) {
+
+    function validateDate($date)
+    {
+        $d = DateTime::createFromFormat('Y-m-d', $date);
+        return $d && $d->format('Y-m-d') == $date;
+    }
+}
